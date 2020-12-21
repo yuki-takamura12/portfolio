@@ -2,9 +2,8 @@
                BASE
 --------------------------------*/
 
-
 *{
-  margin: 0;
+  margin:0;
   padding: 0;
   list-style: none;
   text-decoration: none;
@@ -20,125 +19,64 @@ body {
          LAYOUT MOBILE
 --------------------------------*/
 
-#container{
-  width: 84%;
-  max-width: 1280px;
-  min-width: 512px;
-  margin: 0 auto;
-}
-
-header {
-   position:relative;
-   height: 8rem;
-   background: #333;
-   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
- }
-
-  header h1{
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    font-size: 2rem;
-    color: white;
-  }
-
-nav {
-  padding: 1rem 3rem ;
-  background: #333;
-}
-
-  nav ul{
-    display: flex;
-    flex-direction: row;
-  }
-
-  nav ul li{
-    margin-right: 2rem;
-  }
-
-  nav ul li a {
-    color: white;
-  }
-
-main{
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 600px;
+  padding: 40px;
+  background-color: #333333;
+  color: white;
   display: flex;
   flex-direction: row;
 }
 
-  section{
-    flex: 3;
-    padding: 3rem;
-    background: #EEE;
-  }
+header h1{
+  margin-right: auto;
+}
 
-  article{
-        min-height: 8rem;
-        padding: 1rem;
-        margin-bottom: 2rem;
-        background: #FFF;
-      }
+nav {
+  margin-right: 40px;
+}
 
-      article img{
-        width:75%;
-      }
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 2.5rem;
+}
 
-     aside{
-    flex: 1;
-    padding: 3rem;
-    background: #DDD;
-  }
+nav ul li{
+  margin: 0 .5rem;
+}
 
-footer {
-  padding: 2rem 3rem;
-  text-align: center;
-  background: #333;
+nav a{
   color: white;
 }
 
-/*-------------------------------
-      LAYOUT PC (OverWrite)
---------------------------------*/
+#wrapper {
+margin-top: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+}
 
-@media only screen and (min-width: 769px) {
+section {
+  padding: 40px;
+  height: 500px;
+  background-color: #dddddd;
+  margin-bottom: 40px;
+}
 
-  header {
-    height: 7rem;
-  }
-  header h1 {
-    top: 2.5rem;
-    left: 0rem;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-  }
+section h1{
+  margin-bottom: 1rem;
+}
 
-  #lists {
-    flex-direction: row;
-    justify-content: space-between;
-    top: 7rem;
-    left: 0;
-  }
-  #lists li {
-    flex:1;
-    border-bottom: none;
-    border-right: 1px solid #777;
-  }
-  #lists li:last-child {
-    border-right: none;
-  }
-
-  main {
-    flex-direction: row;
-  }
-  article {
-    flex: 3;
-    padding: 3rem;
-    font-size: 1rem;
-  }
-  aside {
-    flex: 1;
-    padding: 3rem;
-    font-size: 1rem;
-  }
-
+footer{
+  padding: 40px;
+  background-color: #333333;
+  color: white;
 }
